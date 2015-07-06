@@ -2,7 +2,7 @@
 
 I loved the idea introduced in iTunes 11 of creating dynamic colour palettes for individual album views dependent on the album art. 
 
-### image 
+![iTunes Screenshot](http://patpaev.github.io/img/itunes.jpg)
 
 This technique could be used to enhance design and UX in a number of circumstances on the web if executed well. 
 
