@@ -1,7 +1,7 @@
 <?php
 
-require_once("../functions/find_dominant_colour.php");
-($_SERVER['QUERY_STRING']) ? $img = "/./img/".$_SERVER['QUERY_STRING'] : $img = "/./img/antelope.jpg";
+require_once("functions/find_dominant_colour.php");
+($_SERVER['QUERY_STRING']) ? $img = "img/".$_SERVER['QUERY_STRING'] : $img = "img/antelope.jpg";
 $c = find_dominant_colour($img);
 //$c->setTintExaggeration(30);
 ?>
@@ -14,12 +14,12 @@ $c = find_dominant_colour($img);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Application to get primary color palette from an image">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="http://ummta.org/favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
     <title>iTunes Album Palette</title>
     <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,11 +37,11 @@ $c = find_dominant_colour($img);
     
     <div class="row thumbs">
     <?php
-    if ($handle = opendir('../img/')) {
+    if ($handle = opendir('img/')) {
       /* This is the correct way to loop over the directory. */
       while (false !== ($entry = readdir($handle))) {
         if ((strlen($entry) > 5) && (strrpos($entry, '.', -4))) {
-          echo("<a class='thumb' href='../colour?".$entry."'><img src='../img/".$entry."' /></a>");
+          echo("<a class='thumb' href='./?".$entry."'><img src='img/".$entry."' /></a>");
         }
       }
       closedir($handle);
@@ -56,7 +56,7 @@ $c = find_dominant_colour($img);
       </div>
       <div class="col-xs-6">
         <p>After:</p>
-        <img src="../<?php $c->displayPalette(); ?>" class="img-responsive" width="250" />
+        <img src="<?php $c->displayPalette(); ?>" class="img-responsive" width="250" />
       </div>
     </div>
 

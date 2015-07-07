@@ -7,7 +7,7 @@ function find_dominant_colour($orig){
 	$imgFolder = "img/ImageWorkshop";
 	
 	// werk it 
-	$werk = ImageWorkshop::initFromPath(__DIR__.'/..'.$orig);
+	$werk = ImageWorkshop::initFromPath(__DIR__.'/../'.$orig);
 	$werk->getHeight();
 	$werk->getWidth();
 	$werk->resizeInPixel(100, null, true);
