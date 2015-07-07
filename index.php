@@ -1,9 +1,7 @@
 <?php
-
 require_once("functions/find_dominant_colour.php");
 ($_SERVER['QUERY_STRING']) ? $img = "img/".$_SERVER['QUERY_STRING'] : $img = "img/antelope.jpg";
 $c = find_dominant_colour($img);
-//$c->setTintExaggeration(30);
 ?>
 
 <!DOCTYPE html>
@@ -17,16 +15,14 @@ $c = find_dominant_colour($img);
     <link rel="shortcut icon" href="favicon.png">
     <title>iTunes Album Palette</title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
   </head>
   <body>
     <div class="container">
@@ -83,13 +79,10 @@ $c = find_dominant_colour($img);
         <div class="ajax-data"> </div>
       </div>
 
-      
       <div class="footer">
         <p>Patrick Paevere 2013 | You areunning php version <?php echo(phpversion()) ?></p>
       </div>
-
     </div> <!-- /container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -100,27 +93,25 @@ $c = find_dominant_colour($img);
      <!-- Add-ons
     ================================================== -->
     <script>
-    
-/* On form submit, do an AJAX call */
-$( "#getColour" ).submit(function(e) {
-  e.preventDefault();
-  
-  // get form action  
-  var $this = $( this ),
-    action = $this.attr( "action" );
+    /* On form submit, do an AJAX call */
+    $( "#getColour" ).submit(function(e) {
+      e.preventDefault();
+      
+      // get form action  
+      var $this = $( this ),
+        action = $this.attr( "action" );
 
-  //do an AJAX request
-  $.post(
-    action,
-    $this.serializeArray(),
-    function ( data ) {
-      // display the returned message
-      $ ( '.ajax-data' ).html( data );
-    }
-  );
-});
-$( "#getColour" ).submit();
-
+      //do an AJAX request
+      $.post(
+        action,
+        $this.serializeArray(),
+        function ( data ) {
+          // display the returned message
+          $ ( '.ajax-data' ).html( data );
+        }
+      );
+    });
+    $( "#getColour" ).submit();
     </script>
   </body>
 </html>
