@@ -1,12 +1,12 @@
 # iTunes Album Palette 
 
-I loved the idea introduced in iTunes 11 of creating dynamic colour palettes for individual album views dependent on the album art. 
+I loved the idea that Apple introduced in iTunes 11 of creating dynamic colour palettes for individual album views dependent on the album art. 
 
 ![iTunes Screenshot](http://patpaev.github.io/img/itunes.jpg)
 
-This technique could be used to enhance design and UX in a number of circumstances on the web if executed well. 
+This technique could be used to enhance design and UX, providing automatic theming, in a number of circumstances on the web if executed well. 
 
-While this is by no means a comprehensive approach, it provides a proof of concept for the idea. 
+While mine is by no means a comprehensive approach, it provides a proof of concept for the idea. 
 
 ## Usage 
 
@@ -16,7 +16,7 @@ The interface looks something like this:
 
 ![Usage Screenshot](http://patpaev.github.io/img/usage-screen-shot.jpg)
 
-I've placed some sample (royalty free) ones in there thanks to the kind folk at [Unsplash](https://unsplash.com/), [The Pattery Library](http://thepatternlibrary.com) and [Gratisography](http://www.gratisography.com/)! I've tried to sample images where the technique I've used does and doesn't work. 
+I've placed some demonstrative (royalty free) images in there thanks to the kind folks at [Unsplash](https://unsplash.com/), [The Pattery Library](http://thepatternlibrary.com) and [Gratisography](http://www.gratisography.com/)! I've tried to sample images where the technique I've used does and doesn't work. 
 
 ## Future
 
@@ -26,11 +26,11 @@ While I don't intend to perfect this, further improvements for a more complete s
 * Ensuring there's enough contrast between the background colour and the text color 
 * Reduce the amount of browns that the algorithm returns 
 * Return a secordary color
-* Don't let it return negative RGB values...
+* Don't let it return negative RGB values
 * Allow uploads
 * Clear the cache of palette files 
 * Refactoring the code, because I wrote it a couple of years ago and it's messy. 
 
 ## Disclaimer 
 
-Creative Commons License, no affiliations with Apple or iTunes. Feel free to use / modify / add / change * contribute :) 
+Creative Commons License, no affiliations with Apple or iTunes. Feel free to use / modify / add / contribute :) 
