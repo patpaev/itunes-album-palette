@@ -12,6 +12,10 @@ While this is by no means a comprehensive approach, it provides a proof of conce
 
 Start up a web server, put some of your own images in the `/img` folder and voíla! 
 
+The interface looks something like this:
+
+![Usage Screenshot](http://patpaev.github.io/img/usage-screen-shot.jpg)
+
 I've placed some sample (royalty free) ones in there thanks to the kind folk at [Unsplash](https://unsplash.com/), [The Pattery Library](http://thepatternlibrary.com) and [Gratisography](http://www.gratisography.com/)! I've tried to sample images where the technique I've used does and doesn't work. 
 
 ## Future
